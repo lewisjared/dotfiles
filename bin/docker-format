@@ -1,0 +1,41 @@
+#!/usr/bin/env python
+
+import sys
+
+def shorten_tags(lines, tag, replacements):
+    tag_start = lines[0].find(tag)
+    if tag_start == -1:
+        return lines
+
+    tag_len = len(lines[0][tag_start + len(tag):]) - len(lines[0][tag_start + len(tag):].lstrip()) + len(tag)
+
+    fixed_lines = []
+    for l in lines[1:]:
+        t = l[tag_start:tag_start + tag_len]
+        for rep in replacements.keys():
+            t = t.replace(rep, replacements[rep])
+        fixed_lines.append(t.strip())
+
+    new_len = max([len(l) for l in fixed_lines]) + 4
+    line_formatter = '{: <' + str(new_len) + '}'
+
+    fixed_lines = [line_formatter.format(l) for l in fixed_lines]
+    fixed_lines.insert(0, lines[0][tag_start:tag_start+new_len])
+
+    return [lines[i][:tag_start] + fixed_lines[i] + lines[i][tag_start + tag_len:] for i in range(len(lines))]
+
+
+tag_rep = {
+    '236626278599.dkr.ecr.us-west-2.amazonaws.com': 'ecr'
+}
+
+if __name__ == '__main__':
+    # Read in from stdin
+    raw = sys.stdin.readlines()
+
+    # Replace values for the IMAGE col
+    result = shorten_tags(raw, 'IMAGE', tag_rep)
+    result = shorten_tags(result, 'CONTAINER ID', {})
+    #Finally print the result to the user
+    print(''.join(result))
+

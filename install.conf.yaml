@@ -1,0 +1,13 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.bashrc: bashrc
+    ~/.bash_logout: bash_logout
+    ~/bin: bin
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
