@@ -4,3 +4,6 @@
 [submodule "zsh/plugins/zsh-completions"]
 	path = zsh/plugins/zsh-completions
 	url = https://github.com/zsh-users/zsh-completions
+[submodule "nano"]
+	path = nano
+	url = https://github.com/scopatz/nanorc

@@ -10,6 +10,6 @@
     ~/.bashrc: bashrc
     ~/.bash_logout: bash_logout
     ~/.ssh/config: ssh_config
-
+    ~/.nanorc: nanorc
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
