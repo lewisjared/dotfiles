@@ -1,0 +1,4 @@
+Host jenkins.jbl                
+    HostName jenkins.justbecausetech.com
+    User root 
+

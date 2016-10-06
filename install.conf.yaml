@@ -5,9 +5,11 @@
 - clean: ['~']
 
 - link:
+    ~/.zshrc: zshrc
+    ~/.zsh: zsh 
     ~/.bashrc: bashrc
     ~/.bash_logout: bash_logout
-    ~/bin: bin
+    ~/.ssh/config: ssh_config
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

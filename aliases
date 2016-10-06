@@ -1,6 +1,13 @@
 alias du='du -kh'
 
 # ls extensions
+alias ls='ls --color=auto'
+alias grep='grep --color'
+
+alias ll='ls -lah'
+alias la='ls -A'
+alias l=ls
+
 alias lt='ls -ltr'	# Sort by date, most recent last
 alias lk='ls -lSr'	# Sort by size, largest last
 
@@ -17,3 +24,8 @@ alias kk='ll'
 alias d=docker
 alias dc=docker-compose
 alias dps='docker ps | docker-format'
+
+function mcd() {
+    mkdir "${1}" && cd "${1}"
+}
+
