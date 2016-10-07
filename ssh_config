@@ -2,3 +2,6 @@ Host jenkins.jbl
     HostName jenkins.justbecausetech.com
     User root 
 
+Host in-staging.jbl
+    HostName intentions-staging.justbecausetech.com
+    User core
