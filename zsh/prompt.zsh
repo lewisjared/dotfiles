@@ -100,7 +100,8 @@ function RPR_HOST() {
     colors=(cyan green yellow red pink)
     local index=$(python <<EOF
 import hashlib
-hash = int(hashlib.sha1('$(hostname)').hexdigest(), 16)
+
+hash = int(hashlib.sha1('$(hostname)'.encode('ascii')).hexdigest(), 16)
 index = hash % ${#colors} + 1
 print(index)
 EOF
