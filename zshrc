@@ -7,6 +7,10 @@ fi
 PATH=~/.dotfiles/bin:${PATH}
 PATH=~/.miniconda/bin:$PATH
 
+if [ -f ~/.miniconda/bin/virtualenvwrapper_lazy.sh ]; then
+    source ~/.miniconda/bin/virtualenvwrapper_lazy.sh
+fi
+
 export PATH
 
 

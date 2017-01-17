@@ -1,3 +1,13 @@
+#BS
+Host notus
+    HostName notus.bodekerscientific.com
+
+Host bs9
+    HostName 192.168.1.27
+
+Host erebus
+    HostName 192.168.1.20
+
 Host jenkins.jbl                
     HostName jenkins.justbecausetech.com
     User root 
@@ -5,3 +15,17 @@ Host jenkins.jbl
 Host in-staging.jbl
     HostName intentions-staging.justbecausetech.com
     User core
+
+host pan
+    HostName login.uoa.nesi.org.nz
+    User jared.lewis
+    IdentityFile ~/.ssh/pan_rsa_key
+    ServerAliveInterval 120
+
+host fitzroy
+    HostName fitzroy.nesi.org.nz
+    User lewisjared
+
+host csst.kentron.co.nz
+    HostName csst-ssh.kentron.co.nz
+    User root
