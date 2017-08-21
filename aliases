@@ -11,6 +11,11 @@ alias l=ls
 alias lt='ls -ltr'	# Sort by date, most recent last
 alias lk='ls -lSr'	# Sort by size, largest last
 
+# Directory movements
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+
 # Git commands
 alias gs='git status'
 alias gd='git diff'
@@ -31,10 +36,10 @@ function mcd() {
 
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 
-function extract() {
+function ex() {
   if [ -z "$1" ]; then
     # display usage if no parameters given
-    echo "Usage: extract <path/file_name>.<zip|rar|bz2|gz|tar|tbz2|tgz|Z|7z|xz|ex|tar.bz2|tar.gz|tar.xz>"
+    echo "Usage: ex <path/file_name>.<zip|rar|bz2|gz|tar|tbz2|tgz|Z|7z|xz|ex|tar.bz2|tar.gz|tar.xz>"
   else
     if [ -f "$1" ] ; then
        local nameInLowerCase=`echo "$1" | awk '{print tolower($0)}'`

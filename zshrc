@@ -13,6 +13,8 @@ fi
 
 export PATH
 
+# Exports
+source ~/.zsh/exports.zsh
 
 # External plugins (initialized before)
 source ~/.zsh/plugins_before.zsh
