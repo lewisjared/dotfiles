@@ -1,0 +1,3 @@
+channels:
+  - defaults
+  - file:///mnt/storage/Scratch/Ben/conda/pkgs

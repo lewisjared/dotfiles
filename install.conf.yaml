@@ -9,6 +9,7 @@
     ~/.zsh: zsh 
     ~/.bashrc: bashrc
     ~/.bash_logout: bash_logout
+    ~/.condarc: condarc
     ~/.ssh/config: ssh_config
     ~/.nanorc: nanorc
 - shell:
