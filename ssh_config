@@ -12,21 +12,13 @@ Host erebus.remote
     HostName rdc.bodekerscientific.com
     Port 2222
 
-Host jenkins.jbl                
-    HostName jenkins.justbecausetech.com
-    User root 
-
-Host in-staging.jbl
-    HostName intentions-staging.justbecausetech.com
-    User core
-
-host pan
+Host pan
     HostName login.uoa.nesi.org.nz
     User jared.lewis
     IdentityFile ~/.ssh/pan_rsa_key
     ServerAliveInterval 120
 
-host fitzroy
+Host fitzroy
     HostName fitzroy.nesi.org.nz
     User lewisjared
 
@@ -40,3 +32,12 @@ host jared-desktop.remote
 host bourne
     HostName bourne.bodekerscientific.com
     User bourne
+
+# Personal
+Host jenkins.jbl                
+    HostName jenkins.justbecausetech.com
+    User root 
+
+Host in-staging.jbl
+    HostName intentions-staging.justbecausetech.com
+    User core

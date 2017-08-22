@@ -17,8 +17,7 @@ SAVEHIST=$HISTSIZE
 setopt appendhistory
 setopt incappendhistory
 setopt extendedhistory
-
-export EDITOR=nano
+setopt hist_ignore_space
 
 autoload -U up-line-or-beginning-search
 autoload -U down-line-or-beginning-search
