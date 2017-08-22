@@ -8,6 +8,10 @@ Host bs9
 Host erebus
     HostName 192.168.1.20
 
+Host erebus.remote
+    HostName rdc.bodekerscientific.com
+    Port 2222
+
 Host jenkins.jbl                
     HostName jenkins.justbecausetech.com
     User root 
@@ -29,3 +33,10 @@ host fitzroy
 host csst.kentron.co.nz
     HostName csst-ssh.kentron.co.nz
     User root
+
+host jared-desktop.remote
+    ProxyCommand ssh rdc.bodekerscientific.com -p 2222 -W 192.168.1.90:22
+
+host bourne
+    HostName bourne.bodekerscientific.com
+    User bourne
