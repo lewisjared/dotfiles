@@ -1,3 +1,4 @@
 channels:
+  - conda-forge
   - defaults
   - file:///mnt/storage/Scratch/Ben/conda/pkgs

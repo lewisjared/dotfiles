@@ -1,4 +1,4 @@
 export PYTHON_PATH=~/code/work/python/users
 
 
-export EDITOR="subl -w"
+export EDITOR="atom -n -w"

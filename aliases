@@ -1,3 +1,4 @@
+
 alias du='du -kh'
 
 # ls extensions
@@ -69,4 +70,12 @@ function ex() {
 
 function diskspeed() {
  dd if=/dev/zero of="$1" bs=8k count=10k; rm -f "$1"
+}
+
+function lb() {
+    atom ~/bs/logbook/$(date '+%Y-%m-%d').md
+}
+
+function lbp() {
+    atom ~/jared@jared.kiwi.nz/logbook/$(date '+%Y-%m-%d').md
 }
