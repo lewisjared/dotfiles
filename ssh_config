@@ -8,6 +8,10 @@ Host bs9
 Host erebus
     HostName 192.168.1.20
 
+Host erebus.remote
+    HostName rdc.bodekerscientific.com
+    Port 2222
+
 Host pan
     HostName login.uoa.nesi.org.nz
     User jared.lewis
@@ -17,6 +21,17 @@ Host pan
 Host fitzroy
     HostName fitzroy.nesi.org.nz
     User lewisjared
+
+host csst.kentron.co.nz
+    HostName csst-ssh.kentron.co.nz
+    User root
+
+host jared-desktop.remote
+    ProxyCommand ssh rdc.bodekerscientific.com -p 2222 -W 192.168.1.90:22
+
+host bourne
+    HostName bourne.bodekerscientific.com
+    User bourne
 
 # Personal
 Host jenkins.jbl                
