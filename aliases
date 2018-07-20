@@ -30,6 +30,12 @@ alias kk='ll'
 alias d=docker
 alias dc=docker-compose
 alias dps='docker ps | docker-format'
+alias dl='docker logs `docker ps -l -q`'
+
+function db() {
+    docker exec -it ${1} /bin/bash
+}
+alias dbl='db `docker ps -l -q`'
 
 function mcd() {
     mkdir "${1}" && cd "${1}"
