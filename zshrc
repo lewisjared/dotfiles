@@ -5,10 +5,10 @@ fi
 
 
 PATH=~/.dotfiles/bin:${PATH}
-PATH=~/.miniconda/bin:$PATH
+PATH=~/anaconda/bin:$PATH
 
-if [ -f ~/.miniconda/bin/virtualenvwrapper_lazy.sh ]; then
-    source ~/.miniconda/bin/virtualenvwrapper_lazy.sh
+if [ -f ~/anaconda/bin/virtualenvwrapper_lazy.sh ]; then
+    source ~/anaconda/bin/virtualenvwrapper_lazy.sh
 fi
 
 export PATH
@@ -32,3 +32,5 @@ source ~/.zsh/prompt.zsh
 if [ -f ~/.zshrc_local_after ]; then
     source ~/.zshrc_local_after
 fi
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
