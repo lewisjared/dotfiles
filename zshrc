@@ -34,3 +34,4 @@ if [ -f ~/.zshrc_local_after ]; then
 fi
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export CLICOLOR=1

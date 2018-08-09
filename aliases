@@ -2,10 +2,10 @@
 alias du='du -kh'
 
 # ls extensions
-alias ls='ls --color=auto'
-alias grep='grep --color'
+alias ls='ls'
+alias grep='grep'
 
-alias ll='ls -lah'
+alias ll='ls -lahFp'
 alias la='ls -A'
 alias l=ls
 
