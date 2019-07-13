@@ -124,3 +124,23 @@ fi
 export PATH="/usr/local/heroku/bin:$PATH"
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+#. $HOME/anaconda/etc/profile.d/conda.sh
+
+# added by travis gem
+[ -f /home/jared/.travis/travis.sh ] && source /home/jared/.travis/travis.sh
+# added by Miniconda3 4.5.12 installer
+# >>> conda init >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$(CONDA_REPORT_ERRORS=false '/home/jared/miniconda3/bin/conda' shell.bash hook 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    \eval "$__conda_setup"
+else
+    if [ -f "/home/jared/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/jared/miniconda3/etc/profile.d/conda.sh"
+        CONDA_CHANGEPS1=false conda activate base
+    else
+        \export PATH="/home/jared/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda init <<<

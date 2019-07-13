@@ -42,6 +42,7 @@ function mcd() {
 }
 
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias jn="jupyter notebook"
 
 function ex() {
   if [ -z "$1" ]; then

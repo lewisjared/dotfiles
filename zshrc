@@ -5,10 +5,14 @@ fi
 
 
 PATH=~/.dotfiles/bin:${PATH}
-PATH=~/anaconda/bin:$PATH
+#PATH=~/anaconda/bin:$PATH
+. $HOME/anaconda/etc/profile.d/conda.sh
 
-if [ -f ~/anaconda/bin/virtualenvwrapper_lazy.sh ]; then
-    source ~/anaconda/bin/virtualenvwrapper_lazy.sh
+if [ -f "$HOME/anaconda/etc/profile.d/conda.sh" ]; then
+    . "$HOME/anaconda/etc/profile.d/conda.sh"
+    CONDA_CHANGEPS1=false conda activate base
+else
+    \export PATH="$HOME/anaconda/bin:$PATH"
 fi
 
 export PATH
@@ -34,3 +38,6 @@ if [ -f ~/.zshrc_local_after ]; then
 fi
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# added by travis gem
+[ -f /home/jared/.travis/travis.sh ] && source /home/jared/.travis/travis.sh

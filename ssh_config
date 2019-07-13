@@ -27,11 +27,22 @@ host csst.kentron.co.nz
     User root
 
 host jared-desktop.remote
-    ProxyCommand ssh rdc.bodekerscientific.com -p 2222 -W 192.168.1.90:22
+    ForwardX11 yes
+    ProxyCommand ssh rdc.bodekerscientific.com -X -p 2222 -W 192.168.1.28:22
 
 host bourne
     HostName bourne.bodekerscientific.com
     User bourne
+
+# UoM
+host airbox
+    HostName 147.66.74.71
+    User airbox
+
+host marble
+    HostName marble.earthsci.unimelb.edu.au
+    ForwardX11 yes
+    User jllewi
 
 # Personal
 Host jenkins.jbl                
